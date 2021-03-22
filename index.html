@@ -377,7 +377,7 @@
             background-color: lightpink;
         }
 */
-        .p4 table tr:nth-child(3) td:nth-child(2):hover::after,.p4 table tr:nth-child(4) td:nth-child(2):hover::after,.p4 table tr:nth-child(5) td:nth-child(2):hover::after,.p4 table tr:nth-child(6) td:nth-child(2):hover::after{
+        .p4 table .holiday:hover::after{
             background-color: gainsboro;
             width: 70px;
             height: 25px;
@@ -1797,7 +1797,7 @@
            <div class="qm2"> <img src="img/delivery.png"> <div class="qm1">타관대출<br>반납</div></div>
            <div class="qm2"> <img src="img/time2.png"> <div class="qm1">자율학습실<br>좌석현황</div></div>
            <div class="qm2"> <img src="img/desk2.png"> <div class="qm1">권장도서</div></div>
-           <div class="qm2"> <img src="img/mom1.png"> <div class="qm1">맘(MOM)편한<br>도서관서비스</div></div>
+           <div class="qm2"> <img src="img/mom1.png"> <div class="qm1">맘편한<br>도서관<br>서비스</div></div>
        </div>
        <div class="menu-wrap">
        <img src="img/time2.png">
@@ -1821,7 +1821,7 @@
         <div class="qm1">타관대출<br>반납</div>
         <div class="qm1">자율학습실<br>좌석현황</div>
         <div class="qm1">권장도서</div>
-        <div class="qm1">맘(MOM)편한<br>도서관서비스</div>
+        <div class="qm1">맘편한<br>도서관<br>서비스</div>
         </div>
         </div>
     </div>
@@ -2165,7 +2165,7 @@ Copyrightⓒ Changwon City Library. All rights reserved.
     
     </div>
     
-     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+     <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js" type="text/javascript"></script>
      <script>
         $(function(){
@@ -2255,7 +2255,7 @@ Copyrightⓒ Changwon City Library. All rights reserved.
             
             //////////달력////////////////////////////////////
             var today = new Date();
-            var month = today.getMonth()+1;
+            var month = today.getMonth()+2;
             curday = new Date(today.getFullYear(),month-1,1);
             if(month==1||month==3||month==5||month==7||month==8||month==10||month==12){ //31일까지
                 var d = 1;
@@ -2277,6 +2277,7 @@ Copyrightⓒ Changwon City Library. All rights reserved.
                             elm.text(d++);
                             if(i==1){
                                 elm.addClass("holiday");
+                                elm.css("position","relative");
                             }
                             if(d==today.getDate()){
                                 elm.addClass("today");    
@@ -2291,6 +2292,7 @@ Copyrightⓒ Changwon City Library. All rights reserved.
                             elm.text(d++);
                             if(i==1){
                                 elm.addClass("holiday");
+                                elm.css("position","relative");
                             }
                             if(d==today.getDate()){
                                 elm.addClass("today");    

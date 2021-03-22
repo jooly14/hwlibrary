@@ -2255,18 +2255,22 @@ Copyrightⓒ Changwon City Library. All rights reserved.
             
             //////////달력////////////////////////////////////
             var today = new Date();
-            var month = today.getMonth()+1;
+            var month = today.getMonth();
             curday = new Date(today.getFullYear(),month-1,1);
+            var endday;
             if(month==1||month==3||month==5||month==7||month==8||month==10||month==12){ //31일까지
                 var d = 1;
-                var endday = 31;
+                endday = 31;
                
             }else if(month==2){ //28일까지
                 var d = 1;
-                var endday = 28;
+                endday = 28;
+                if(today.getFullYear()%400==0||(today.getFullYear()%100!=0&&today.getFullYear()%4==0)){
+                    endday++;
+                }
             }else{
                 var d = 1;
-                var endday = 30;
+                endday = 30;
             }
              for(;d<endday+1;){
                 var tr1 = $("<tr></tr>");
@@ -2274,7 +2278,6 @@ Copyrightⓒ Changwon City Library. All rights reserved.
                     for(var i=0;i<7;i++){
                         var elm = $("<td></td>");
                         if(i>=curday.getDay()){
-                            elm.text(d++);
                             if(i==1){
                                 elm.addClass("holiday");
                                 elm.css("position","relative");
@@ -2282,6 +2285,7 @@ Copyrightⓒ Changwon City Library. All rights reserved.
                             if(d==today.getDate()){
                                 elm.addClass("today");    
                             }
+                            elm.text(d++);
                         }
                         tr1.append(elm);
                     }
@@ -2289,7 +2293,6 @@ Copyrightⓒ Changwon City Library. All rights reserved.
                     for(var i=0;i<7;i++){
                         var elm = $("<td></td>");
                         if(d<=endday){
-                            elm.text(d++);
                             if(i==1){
                                 elm.addClass("holiday");
                                 elm.css("position","relative");
@@ -2297,6 +2300,7 @@ Copyrightⓒ Changwon City Library. All rights reserved.
                             if(d==today.getDate()){
                                 elm.addClass("today");    
                             }
+                            elm.text(d++);
                         }
                         tr1.append(elm);
                     }

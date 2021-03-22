@@ -22,6 +22,7 @@ $(function(){
                                     "height":"30px",
                                     "padding-top":"10px"
                                     })
+            $(".p1-2 .imgbox span").css("transform","translate("+($(window).innerWidth()*0.344-$(".p1-2 .imgbox span").innerWidth()/2)+"px,-"+($(window).innerHeight()*0.36-$(".p1-2 .imgbox span").innerHeight()/2)+"px)");
         }else if($(window).width()>783){
                   if($("html, body").scrollTop()>=200){
                 $(".page-index").css("position","fixed");
@@ -36,6 +37,7 @@ $(function(){
                                     "height":"30px",
                                     "padding-top":"10px"
                                     })
+           $(".p1-2 .imgbox span").css("transform","translate("+($(window).innerWidth()*0.338-$(".p1-2 .imgbox span").innerWidth()/2)+"px,-"+($(window).innerHeight()*0.36-$(".p1-2 .imgbox span").innerHeight()/2)+"px)");
         }else{
 
               $(".page-index").css("position","fixed");
@@ -46,6 +48,7 @@ $(function(){
                                     "height":"25px",
                                     "padding-top":"5px"
                                     })
+             $(".p1-2 .imgbox span").css("transform","translate("+($(window).innerWidth()*0.428-$(".p1-2 .imgbox span").innerWidth()/2)+"px,-"+($(window).innerHeight()*0.32-$(".p1-2 .imgbox span").innerHeight()/2)+"px)");
         }
              $(".page-index li").css("font-weight","normal");
         if($("html, body").scrollTop()>=$(".p8").offset().top-50){
@@ -65,7 +68,6 @@ $(function(){
         }else if($("html, body").scrollTop()>=$(".p1-2").offset().top-50){
             $(".page-index li").eq(0).css("font-weight","bold");
         }
-       $(".p1-2 .imgbox span").css("transform","translate("+($(window).innerWidth()*0.7/2-$(".p1-2 .imgbox span").innerWidth()/1.3)+"px,-"+($(window).innerHeight()*0.7/2-$(".p1-2 .imgbox span").innerHeight()/3)+"px)");
 
     });
    if($(window).width()>1200){
@@ -178,11 +180,13 @@ $(function(){
             });
         });
     });
+    
     $(".imgbox span").css("cursor","pointer");
     $(".p1-2 .imgbox span").css("z-index","30");
-       $(".p1-2 .imgbox span").css("transform","translate("+($(window).innerWidth()*0.7/2-$(".p1-2 .imgbox span").innerWidth()/1.3)+"px,-"+($(window).innerHeight()*0.7/2-$(".p1-2 .imgbox span").innerHeight()/3)+"px)");
+    
 
-     $("#navg-box").change(function(){
+    //모바일 네비게이션 버튼 클릭시
+    $("#navg-box").change(function(){
         if($(this).is(":checked")){
             $("#nav4-r2").prop("checked",true);
         }

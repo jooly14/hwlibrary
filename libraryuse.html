@@ -679,7 +679,7 @@
             position: absolute;
             transition: all .5s;
             opacity: 0;
-             height: 1800%;
+            height: 1800%;
         }
         @media(max-width:800px){
               .p-search{
@@ -781,7 +781,6 @@
             }
             .navgroup #navg-box:checked ~ .navg-box{
                 width: 100%;
-               
                 z-index: 30000;
                 background-color: #023B47;
                 display: block;
@@ -1025,36 +1024,34 @@
                 min-width: 300px;
                 width: 90%;
             }
-/*
+
              .navg-box .p-search form select.se1,.navg-box .p-search form select.se1 option,.navg-box .p-search form input{
                 font-size: 14px;
             }
-*/
+
             .navg-box .nav3 ul{
                 padding-right: 20%;
             }
-/*
+
             .navg-box .nav3 ul li{
                 font-size: 12px;
             }
-*/
+
             .navg-box .nav4{
                 min-width: 300px;
             }
-/*
             .navg-box .nav4 ul li{
                 font-size: 13px;
             }
-*/
             .navg-box .nav4 label{
-/*                font-size: 14px;*/
+                font-size: 14px;
                 width: 40%;
             }
-/*
+
             .navg-box .nav4 ul li ul li,.navg-box .nav4 ul li ul a li span{
                 font-size: 14px;
             }
-*/
+
              .navg-box .nav4 input[type="radio"]:checked ~ .div2{
                 display: flex;
                 position: absolute;
@@ -1769,7 +1766,13 @@ Copyrightⓒ Changwon City Library. All rights reserved.
                 }
             });
             
-            
+            //모바일 네비게이션에서 같은 페이지 내에 있는 링크 클릭시 네비게이션 화면이 안 닫히는 문제 해결
+             $(".div2 a").click(function(){
+                if($(this).attr("href").indexOf("libraryuse")!=-1){
+                    $("#navg-box").prop("checked",false);
+                }
+            });
+           
             
         });
     </script>

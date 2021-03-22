@@ -2398,6 +2398,17 @@ Copyrightⓒ Changwon City Library. All rights reserved.
             $(".imgbox span").css("cursor","pointer");
             $(".p1-2 .imgbox span").css("z-index","30");
                $(".p1-2 .imgbox span").css("transform","translate("+($(window).innerWidth()*0.7/2-$(".p1-2 .imgbox span").innerWidth()/1.3)+"px,-"+($(window).innerHeight()*0.7/2-$(".p1-2 .imgbox span").innerHeight()/3)+"px)");
+            
+             $("#navg-box").change(function(){
+                if($(this).is(":checked")){
+                    $("#nav4-r2").prop("checked",true);
+                }
+            });
+            $(".div2 a").click(function(){
+                if($(this).attr("href").indexOf("introduce")!=-1){
+                    $("#navg-box").prop("checked",false);
+                }
+            });
         });
     </script>
 </body>

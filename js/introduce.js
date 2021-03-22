@@ -48,7 +48,7 @@ $(function(){
                                     "height":"25px",
                                     "padding-top":"5px"
                                     })
-             $(".p1-2 .imgbox span").css("transform","translate("+($(window).innerWidth()*0.428-$(".p1-2 .imgbox span").innerWidth()/2)+"px,-"+($(window).innerHeight()*0.32-$(".p1-2 .imgbox span").innerHeight()/2)+"px)");
+             $(".p1-2 .imgbox span").css("transform","none");
         }
              $(".page-index li").css("font-weight","normal");
         if($("html, body").scrollTop()>=$(".p8").offset().top-50){

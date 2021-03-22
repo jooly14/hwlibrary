@@ -1190,6 +1190,13 @@ h4{
     .p1-2 .imgbox img{
         width: 90%;
         height: 60%;
+       transform: translate(-52.5%,-50%);
+    }
+    .p1-2 .imgbox span {
+        font-size: 25px;
+        top: 0px;
+        right: 0px;
+        left:auto;
     }
 }
 /*********************************************************************/

@@ -1487,20 +1487,21 @@ footer .f2{
     footer .f3{
         padding: 10px;
     }
+    .p5{
+        height:1050px;
+    }
      .p5 .wrap5{
         min-width: 300px;
         width: 100%;
          position: relative;
     }
+    
     .category{
         position: absolute;
         top: 30px;
     }
-    .p5{
-        height: 1600px;
-    }
      .p5 table{
-        width: 100%;
+        width: 50%;
 
     } 
     .p5 .best,.p5 .new,.p5 .recommend{
